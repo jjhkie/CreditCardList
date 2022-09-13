@@ -8,7 +8,7 @@
 
 ## [ Point ]
 
-  - TableView Cell 은 XIB File 을 통해 그릴 수 있다.
+  - TableView Cell 은 XIB File 을 통해 커스텀이 가능하다.
 
         [ v ] Class 생성할 때, Also create XIB file Option Check 
 
@@ -23,6 +23,15 @@
 ## [ Add ]
 
   - UINib
+
+    [ v ] 빌드시에 xib가 nib로 변환되므로 UINib 을 사용한다.
+
+         TableView에 xib를 "등록" 시켜주는 것
+
+        let nibName = UINib(nibName: "CardListCell", bundle: nil)
+        tableView.register(nibName, forCellReuseIdentifier: "CardListCell")
+
+        
 
   - TableView 
 
